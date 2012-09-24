@@ -1,0 +1,191 @@
+@import 'sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+
+// Your custom code goes here...
+@include pictos-iconmask('add1');
+@include pictos-iconmask('backspace');
+@include pictos-iconmask('check2');
+@include pictos-iconmask('compose');
+
+.x-list-item .x-list-disclosure {
+	overflow: hidden;
+	-webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAAAXNSR0IArs4c6QAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wGBwQ7Dme80Q4AAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAKBJREFUOMvtU7ENAyEQM0i0DJMMxggnNoCKhpWyBxVINBQUlyrRJwKeKF0Ul9bZ8vl0wO8ixshExGdzYkSGEDilBKUUeu+w1oqZgRyRrTUAQO8dSimskkydnXNcSgGAZRKx2s97zznnpYlcGRhjnsOzdeTGQa5Hk60SHyAiaK1vH5/xIOZa6wv/3oH4RjxcgYguu+JVAt4R46TArV/4A7gDIZZWTRQC+PUAAAAASUVORK5CYII=') no-repeat;
+	-webkit-mask-size: 1.2em;
+	background-color: #FFFFFF;
+	background-image: -webkit-linear-gradient(#939393,#000000);
+	background-image: linear-gradient(#939393,#000000);
+	position: absolute;
+	width: 1em;
+	height: 1.2em;
+	bottom: 30%;
+}
+
+//$list-padding: .7em;
+$list-padding: 0.1;
+.commute-list {
+    .x-dataview-inner {
+        padding: $list-padding;
+    }
+
+    //commute list item styling
+    .commute-list-item {
+        padding: $list-padding/2;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-width: 0;
+
+        //add rounded corners to the last item
+        &:last-child {
+            border-bottom-width: 1px;
+            @include border-bottom-radius($list-padding/2);
+        }
+    }
+
+    //add rounded corners to the first item
+    .x-mask + .commute-list-item {
+        @include border-top-radius($list-padding/2);
+    }
+    
+    .commute-list-item .x-img {
+        background: #eee;
+        background-size: cover;
+        background-position: center center;
+
+        @include border-radius($list-padding/2);
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .commute-list-item .x-name {
+        padding: 0 $list-padding/2;
+    }
+}
+
+.x-multiselect-wrap {
+	padding: 2em;
+	column-gap: 1em;
+}
+
+.x-multiselect-item {
+	border: 2px solid #000000;
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em 0;
+	background-color: #c3daf9;
+}
+
+.x-multiselect-item.x-item-selected {
+	background-color: #6593cf;
+}
+
+.empty {
+	padding: 3px;
+}
+
+.clear {
+	clear: both;
+}
+
+.icon-commute {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/commute.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-group {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/group.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-friend {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/friend.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-invite {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/invite.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-personal {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/personal.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-setting {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/setting.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-terms {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/terms.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-policy {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/policy.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.icon-about {
+	margin: 3px;
+	min-width: 31%;
+	min-height: 31%;
+	background-image: url('../icons/about.png') !important;
+	background-size: 101px 101px;
+	background-repeat: repeat-x;
+}
+
+.group-name {
+	font-weight: bold;
+}
+
+.group-location {
+}
